@@ -29,7 +29,7 @@ import {
 import { Link } from 'react-router-dom';
 
 type Props = {
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 const drawerWidth = 240;
@@ -132,7 +132,7 @@ const DrawerPersonalIcons: IconListItem[] = [
   },
 ];
 
-export default function AppLayout({ children }: Props) {
+const AppLayout: React.FC = ({ children }: Props) => {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -219,3 +219,5 @@ export default function AppLayout({ children }: Props) {
     </Box>
   );
 }
+
+export default AppLayout
